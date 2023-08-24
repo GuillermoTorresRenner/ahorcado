@@ -189,7 +189,8 @@ class Juego {
       if (this.aciertos === this.numeroCaracteres) {
         alert(`Felicitaciones Ganaste la partida! \n
       Descubriste la palbra secreta ${this.palabraSecreta.toUpperCase()}\n
-      Refresca el navegador (f5) para jugar una nueva partida`);
+      `);
+        window.location.reload();
       }
     }
   }
@@ -200,6 +201,7 @@ class Juego {
 
     this.input = prompt(`\t\t\t\t\t\t\t AHORCADO\n
 =======================================================\n
+Para salir del juego escriba la palabra: SALIR\n
 TURNOS: ${this.turnos}\n\n
 ACIERTOS: ${this.aciertos}\n\n
 LETRAS USADAS: ${this.#getLetrasUsadas()}\n\n
